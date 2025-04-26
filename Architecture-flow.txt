@@ -1,0 +1,36 @@
+This is a full-stack feedback collection app built using React on the frontend, Express on the backend, and MongoDB for the database. The goal is simple: let users submit feedback and display that data in a dashboard where it can be filtered and sorted.
+
+Backend (Express + MongoDB)
+The backend uses Node.js with Express to handle the routes, and Mongoose to interact with MongoDB.
+The server connects to Mongo when it starts and stays connected for all DB operations.
+I define a Mongoose schema for feedback that includes the user’s name, email, the feedback text, a category (like suggestion or bug report), and a timestamp.
+Two API routes are available:
+One for submitting new feedback (POST).
+One for retrieving all feedback (GET), sorted by newest first.
+Middleware includes CORS (to allow communication from the frontend) and JSON body parsing (to handle incoming data properly).
+
+Frontend (React)
+On the frontend side, I’ve got a clean React app that handles both the form and the dashboard.
+Main Components:
+FeedbackForm: A simple form where users enter their feedback along with name, email, and category.
+FeedbackDashboard: A dashboard that shows all submitted feedback in a table and allows filtering and sorting.
+
+How it works:
+The form state is handled using useState, and when the form is submitted, it sends a POST request to the backend.
+After submission, the form resets, and the dashboard is refreshed.
+The dashboard fetches data on load and whenever new feedback is submitted.
+Feedback entries can be filtered by category and sorted by date (newest or oldest).
+All filtering and sorting logic is done client-side using React’s state and useEffect hook.
+
+Flow of Data
+A user fills out and submits the feedback form.
+The frontend sends that data to the backend via a POST request.
+The backend saves the data in MongoDB.
+The frontend then fetches all feedback entries with a GET request.
+Feedback entries are displayed in a table, and users can filter and sort them as needed.
+
+Tech Stack
+Frontend: React, Axios, CSS
+Backend: Node.js, Express, Mongoose
+Database: MongoDB local
+Tools: CORS, Body Parser, npm
