@@ -36,12 +36,14 @@ cd feedback-system
 2. Start the Backend
 Use a local MongoDB instance, make sure you have MongoDB installed and running on your machine. By default, MongoDB will be running at mongodb://localhost:27017/feedbackDB.
 
-cd backend
-npm install
-npm start
+
+-> cd backend
+-> npm install
+-> npm start
 
 3. Start the Frontend
 In another terminal:
-cd frontend
-npm install
-npm start
+
+-> cd frontend
+-> npm install
+-> npm start
