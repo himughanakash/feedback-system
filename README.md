@@ -28,7 +28,7 @@ A simple full-stack application built with **React**, **Node.js**, and **MongoDB
 - Node.js installed
 - MongoDB installed and running locally
 
-### 1. Clone the Repository
+1. Clone the Repository
 
 git clone https://github.com/himughanakash/feedback-system.git
 
